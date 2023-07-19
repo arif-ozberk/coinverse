@@ -1,0 +1,70 @@
+@import "../globals.scss";
+
+
+.timelineContainer {
+    display: flex;
+    column-gap: 5rem;
+
+    @media(max-width: 1050px) {
+        flex-direction: column;
+        row-gap: 3rem;
+    }
+}
+
+.timelineLeft {
+    flex: 2;
+
+    h2 {
+        margin-bottom: 1rem
+    }
+}
+
+.timelineRight {
+    flex: 3;
+
+    .timePoint {
+        position: relative;
+        padding-left: 4rem;
+        padding-bottom: 3rem;
+        margin-bottom: 3rem;
+        border-bottom: 1px solid #80808080;
+
+        @media(max-width: 550px) {
+            padding-left: 2.5rem;
+        }
+
+        .bulletPoint {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: $white;
+            border-radius: 50%;
+            top: 6px;
+            left: 0;
+
+            @media(max-width: 550px) {
+                width: 18px;
+                height: 18px;
+                top: 10px;
+            }
+        }
+        
+        h3 {
+            color: $white;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        h4 {
+            color: $white;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.timePoint:nth-child(4) {
+    border-bottom: none;
+    margin-bottom: 0;
+}

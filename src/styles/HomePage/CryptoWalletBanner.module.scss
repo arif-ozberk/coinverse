@@ -1,0 +1,106 @@
+@import "../globals.scss";
+
+.cryptoWalletBanner {
+    display: flex;
+
+    @media(max-width: 1096px) {
+        flex-direction: column-reverse;
+    }
+}
+
+.leftContainer {
+    flex: 1;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+
+    @media(max-width: 1096px) {
+        flex: none;
+    }
+
+    .images {
+        position: relative;
+        width: 90%;
+
+        @media(max-width: 1096px) {
+            width: 60%;
+        }
+
+        @media(max-width: 762px) {
+            width: 80%;
+        }
+
+        @media(max-width: 479px) {
+            width: 100%;
+        }
+    }
+
+    img {
+        position: absolute;
+        width: 45%;
+    }
+}
+
+.leftContainer img:nth-child(1) {
+    transform: rotate(-8deg);
+    left: 0;
+    position: relative;
+
+    @media(max-width: 1096px) {
+        left: 8%;
+    }
+}
+
+.leftContainer img:nth-child(2) {
+    transform: rotate(8deg);
+    right: 16%;
+
+    @media(max-width: 1096px) {
+        right: 8%;
+    }
+}
+
+.rightContainer {
+    flex: 1;
+
+    .walletTitle {
+        margin-bottom: 1rem;
+    }
+
+    .walletText {
+        margin-bottom: 2rem;
+    }
+}
+
+.infoPoints {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    color: $white;
+
+    h3 {
+        font-size: 1.2rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+
+        @media(max-width: 479px) {
+            font-size: 1rem;
+            height: fit-content;
+        }
+    }
+
+    i {
+        background-color: $purple-main;
+        width: 50px;
+        height: 50px;
+        @include flex-center;
+        font-size: 1.5rem;
+        border-radius: 15px;
+        margin-right: 1rem;
+    }
+
+    @media(max-width: 1096px) {
+        margin-bottom: 4rem;
+    }
+}

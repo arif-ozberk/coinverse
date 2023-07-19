@@ -1,0 +1,17 @@
+@import "./globals.scss";
+
+
+.downloadAppButton {
+    color: $white;
+    background-color: $purple-main;
+    transition: background-color 0.3s ease, scale 0.3s ease;
+
+    &:hover {
+        background-color: $purple-faded;
+        scale: 0.93;
+    }
+
+    @media(max-width: 670px) {
+        width: 100%;
+    }
+}

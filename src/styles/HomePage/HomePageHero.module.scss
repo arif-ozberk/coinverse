@@ -1,0 +1,62 @@
+@import "../globals.scss";
+
+
+.heroTitle {
+    width: 70%;
+
+    @media(max-width: 950px) {
+        width: 100%;
+    }
+}
+
+.heroText {
+    width: 60%;
+    margin-bottom: 2.3rem;
+
+    @media(max-width: 950px) {
+        width: 100%;
+    }
+}
+
+.heroButtons {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+
+    @media(max-width: 670px) {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+}
+
+.pricingButton {
+    color: $white;
+    background-color: $purple-faded;
+    transition: background-color 0.3s ease, scale 0.3s ease;
+
+    &:hover {
+        background-color: $purple-main;
+        scale: 0.93;
+    }
+
+    @media(max-width: 670px) {
+        width: 100%;
+    }
+}
+
+.heroImages {
+    position: relative;
+    display: flex;
+
+    .laptopImage {
+        width: 92%;
+    }
+
+    .phoneImage {
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        bottom: 0;
+        height: 87%;
+    }
+}

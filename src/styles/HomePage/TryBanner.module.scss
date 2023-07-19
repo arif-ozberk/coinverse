@@ -1,0 +1,74 @@
+@import "../globals.scss";
+
+
+.tryBannerBackground {
+    background-color: $purple-main;
+    overflow: hidden;
+}
+
+.tryBanner {
+    display: flex;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    @media(max-width: 950px) {
+        flex-direction: column;
+    }
+
+    @media(max-width: 670px) {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+.leftContainer {
+    flex: 1;
+
+    .tryTitle {
+        margin-bottom: 1rem;
+    }
+
+    .tryText {
+        margin-bottom: 2rem;
+    }
+}
+
+.rightContainer {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    @media(max-width: 1050px) {
+        justify-content: end;
+    }
+
+    @media(max-width: 950px) {
+        justify-content: center;
+    }
+
+    img {
+        width: 65%;
+        position: absolute;
+
+        @media(max-width: 950px) {
+            display: none;
+        }
+    }
+}
+
+.downloadAppButton {
+    color: $purple-main;
+    background-color: $white;
+    transition: background-color 0.3s ease, scale 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        background-color: $purple-faded;
+        scale: 0.93;
+        color: $white;
+    }
+
+    @media(max-width: 670px) {
+        width: 100%;
+    }
+}

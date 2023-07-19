@@ -1,0 +1,64 @@
+@import "../globals.scss";
+
+
+.heroTitle {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.heroText {
+    text-align: center;
+}
+
+.cardsTitle {
+    margin-bottom: 2rem;
+}
+
+.aboutCards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 2rem;
+
+        @media(max-width: 950px) {
+            flex-direction: column;
+            row-gap: 2rem;
+        }
+
+        .aboutCard {
+            background-color: $purple-faded;
+            padding: 3rem 2rem;
+            border-radius: 30px;
+            display: flex;
+
+            @media(max-width: 550px) {
+                padding: 2.5rem 1.5rem;
+            }
+
+            i {
+                @include flex-center;
+                background-color: $purple-main;
+                font-size: 2.2rem;
+                color: $white;
+                height: 66px;
+                aspect-ratio: 1;
+                border-radius: 18px;
+                margin-right: 1rem;
+            }
+
+            .cardContext {
+
+                h3 {
+                    color: $white;
+                    letter-spacing: 1px;
+                    margin-bottom: 0.6rem;
+                    line-height: 1.2;
+                }
+            }
+        }
+    }
+}

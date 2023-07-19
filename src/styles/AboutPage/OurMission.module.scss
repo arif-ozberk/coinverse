@@ -1,0 +1,59 @@
+@import "../globals.scss";
+
+
+.ourMissionBanner {
+    position: relative;
+}
+
+.missionContext {
+    width: 50%;
+    z-index: 2;
+
+    @media(max-width: 950px) {
+        width: 62%;
+    }
+
+    @media(max-width: 762px) {
+        width: 70%;
+    }
+
+    @media(max-width: 670px) {
+        width: 100%;
+    }
+
+    .missionTitle {
+        margin-bottom: 1rem;
+    }
+
+    .missionText {
+        margin-bottom: 3rem;
+    }
+
+    .storyTitle {
+        margin: 6rem 0 1rem 0;
+    }
+
+    .storyText {
+        margin-bottom: 3rem;
+    }
+}
+
+.missionImage {
+    position: absolute;
+    top: 0;
+    width: 700px;
+    right: -150px;
+    z-index: 1;
+
+    @media(max-width: 950px) {
+        right: -300px;
+    }
+
+    @media(max-width: 762px) {
+        right: -450px;
+    }
+
+    @media(max-width: 670px) {
+        display: none;
+    }
+}

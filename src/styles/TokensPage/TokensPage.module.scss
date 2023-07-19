@@ -1,0 +1,319 @@
+@import "../globals.scss";
+
+
+$title-font-size: 1.05rem;
+
+
+.tokensPage {
+    position: relative;
+
+    .refreshButton {
+        position: absolute;
+        right: 2rem;
+        margin-top: 1rem;
+        color: $white;
+        font-size: 1.3rem;
+        cursor: pointer;
+        transition: color 0.2s ease;
+        z-index: 3;
+
+        &:hover {
+            color: $purple-main;
+        }
+    }
+}
+
+.tokensTitle {
+    text-align: center;
+}
+
+.tokensText {
+    text-align: center;
+}
+
+.tokenTitle {
+    position: relative;
+    display: flex;
+    color: $white;
+    border-bottom: 1px solid $purple-medium;
+
+    @media(max-width: 1200px) {
+        display: none;
+    }
+
+    h2 {
+        font-size: $title-font-size;
+        padding: 2rem 0;
+        letter-spacing: 1px;
+    }
+
+    .name {
+        width: 100%;
+    }
+
+    .price {
+        width: 100%;
+    }
+
+    .marketCap {
+        width: 100%;
+    }
+
+    .change {
+        width: 100%;
+    }
+
+    .website {
+        width: 100%;
+    }
+}
+
+.tokenCard {
+    display: flex;
+    padding: 3rem 0;
+    border-bottom: 1px solid $purple-medium;
+    position: relative;
+
+    @media(max-width: 1200px) {
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+
+    .responsiveTitles {
+        display: none;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        color: $white-faded;
+        margin-bottom: 0.5rem;
+        border-bottom: 1px solid $purple-medium;
+        width: 50%;
+
+        @media(max-width: 1200px) {
+            display: flex;
+        }
+    }
+
+    div {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        color: $white;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .closeButton {
+        position: absolute;
+        font-size: 1.2rem;
+        color: $white;
+        right: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        cursor: pointer;
+        transition: color 0.2s ease;
+        
+        &:hover {
+            color: $purple-main;
+        }
+
+        @media(max-width: 1200px) {
+            top: 4.5rem;
+            right: 1rem;
+        }
+    }
+
+    .name {
+        justify-content: start;
+
+        img {
+            width: 45px;
+            margin-right: 10px;
+        }
+
+        h2 {
+            margin-right: 10px;
+        }
+
+        .coinSymbol {
+            background-color: $purple-faded;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+    }
+
+    .price {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .marketCap {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .change {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .website {
+        justify-content: start;
+
+        a {
+            text-decoration: underline;
+            color: $white-faded;
+        }
+    }
+}
+
+.errorMsg {
+    color: $white-faded;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 2rem;
+    animation-name: errorAnimate;
+    animation-timing-function: ease;
+    animation-duration: 0.3s;
+}
+
+@keyframes errorAnimate {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+// CSS Loader
+
+.loader {
+    width: 80px;
+    height: 50px;
+    position: relative;
+    margin: 2rem auto 0;
+}
+
+.loaderText {
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    color: #C8B6FF;
+    animation: text_713 3.5s ease both infinite;
+    font-size: .8rem;
+    letter-spacing: 1px;
+}
+
+.load {
+    background-color: #9A79FF;
+    border-radius: 50px;
+    display: block;
+    height: 16px;
+    width: 16px;
+    bottom: 0;
+    position: absolute;
+    transform: translateX(64px);
+    animation: loading_713 3.5s ease both infinite;
+}
+
+.load::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #D1C2FF;
+    border-radius: inherit;
+    animation: loading2_713 3.5s ease both infinite;
+}
+
+@keyframes text_713 {
+    0% {
+        letter-spacing: 1px;
+        transform: translateX(0px);
+    }
+
+    40% {
+        letter-spacing: 2px;
+        transform: translateX(26px);
+    }
+
+    80% {
+        letter-spacing: 1px;
+        transform: translateX(32px);
+    }
+
+    90% {
+        letter-spacing: 2px;
+        transform: translateX(0px);
+    }
+
+    100% {
+        letter-spacing: 1px;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes loading_713 {
+    0% {
+        width: 16px;
+        transform: translateX(0px);
+    }
+
+    40% {
+        width: 100%;
+        transform: translateX(0px);
+    }
+
+    80% {
+        width: 16px;
+        transform: translateX(64px);
+    }
+
+    90% {
+        width: 100%;
+        transform: translateX(0px);
+    }
+
+    100% {
+        width: 16px;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes loading2_713 {
+    0% {
+        transform: translateX(0px);
+        width: 16px;
+    }
+
+    40% {
+        transform: translateX(0%);
+        width: 80%;
+    }
+
+    80% {
+        width: 100%;
+        transform: translateX(0px);
+    }
+
+    90% {
+        width: 80%;
+        transform: translateX(15px);
+    }
+
+    100% {
+        transform: translateX(0px);
+        width: 16px;
+    }
+}

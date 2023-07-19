@@ -1,0 +1,137 @@
+@import "../globals.scss";
+
+
+.videoBanner {
+    display: flex;
+
+    @media(max-width: 1096px) {
+        flex-direction: column;
+    }
+}
+
+.leftContainer {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 4rem;
+
+    h1 {
+        margin-bottom: 1rem;
+    }
+
+    p {
+        margin-bottom: 2rem;
+    }
+
+    @media(max-width: 479px) {
+        padding-right: 0;
+    }
+}
+
+.rightContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+
+    @media(max-width: 1096px) {
+        width: 70%;
+        margin: auto;
+    }
+
+    @media(max-width: 1096px) {
+        width: 100%;
+    }
+
+    .videoFilter {
+        position: absolute;
+        z-index: 2;
+        background-color: $purple-main;
+        height: 100%;
+        width: 100%;
+        opacity: 0.7;
+    }
+
+    .playCircle {
+        position: absolute;
+        z-index: 3;
+        background-color: $white-faded;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        opacity: 0.5;
+        
+        @media(max-width: 479px) {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    a {
+        position: absolute;
+        text-decoration: none;
+        z-index: 4;
+        color: $white;
+        font-size: 3.2rem;
+        @include flex-center;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: scale 0.3s ease;
+
+        &:hover {
+            scale: 0.8;
+        }
+
+        @media(max-width: 479px) {
+            width: 80px;
+            height: 80px;
+            font-size: 2.2rem;
+        }
+    }   
+}
+
+
+
+
+
+
+
+
+.videoPoints {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    color: $white;
+
+    h3 {
+        font-size: 1.2rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+
+        @media(max-width: 479px) {
+            font-size: 1rem;
+            height: fit-content;
+        }
+    }
+
+    i {
+        background-color: $purple-main;
+        width: 50px;
+        height: 50px;
+        @include flex-center;
+        font-size: 1.5rem;
+        border-radius: 15px;
+        margin-right: 1rem;
+    }
+
+    @media(max-width: 1096px) {
+        margin-bottom: 4rem;
+    }
+}

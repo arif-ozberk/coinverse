@@ -1,0 +1,95 @@
+@import "../globals.scss";
+
+
+
+.commentsBanner {
+    width: 100%;
+}
+
+.titleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    @media(max-width: 762px) {
+        flex-direction: column;
+        align-items: start;
+        row-gap: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.commentFrame {
+    position: relative;
+    height: calc(300px + 3rem);
+    width: 100%;
+
+    @media(max-width: 762px) {
+        height: calc(405px + 3rem);
+    }
+
+    @media(max-width: 762px) {
+        height: calc(440px + 3rem);
+    }
+}
+
+.comments {
+    display: flex;
+    column-gap: 32px;
+    position: absolute;
+    transition: transform 0.8s ease;
+}
+
+.commentCard {
+    background-color: $purple-faded;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    min-height: 300px;
+    border-radius: 30px;
+    padding: 3rem 1.5rem;
+    transition: opacity 0.5s ease;
+
+    @media(max-width: 762px) {
+        width: 300px;
+    }
+
+    @media(max-width: 479px) {
+        width: 288px;
+    }
+
+    p {
+        margin-bottom: auto;
+    }
+
+    h2 {
+        color: $white;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-top: 1rem;
+    }
+
+    h3 {
+        color: $white-faded;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+}
+
+.carouselButtons {
+    display: flex;
+    column-gap: 0.8rem;
+    width: fit-content;
+    margin: 2rem auto 0;
+
+    .buttonDot {
+        display: flex;
+        width: 15px;
+        height: 15px;
+        background-color: #d4d4d4b0;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: color 0.2s ease, scale 0.2s ease;
+    }
+}
